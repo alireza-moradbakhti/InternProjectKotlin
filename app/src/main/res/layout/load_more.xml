@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#5FF3A2">
+
+    <ProgressBar
+        android:id="@+id/prgLoadMore"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="5dp"
+        android:indeterminateTint="@color/behGreen"
+        app:layout_constraintBottom_toTopOf="@id/txtErrorLoad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtErrorLoad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/errorLoad"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@id/btnRefresh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/prgLoadMore" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="@color/behWhite"
+        android:text="@string/retry"
+        android:textColor="@color/behGreen"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:drawableStart="@drawable/ic_refresh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtErrorLoad" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

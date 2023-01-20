@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">MovieApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login">ورود</string>
+    <string name="signUp">ثبت نام</string>
+    <string name="header">در به خوان …</string>
+    <string name="titleDesc">کتاب های تازه برای خواندن پیدا میکنید . \n \n با خوانندگان هم سلیقه خودتان آشنا میشوید . \n \n به دیگران برای انتخاب کتاب خوب کمک میرسانید . \n \n به جمع بزرگ دوست داران و عاشقان کتاب ها می پیوندید . \n \n به اطلاعات کامل بیش از 000\'000\'1جلد کتاب،هزاران \n \n نویسنده و صدها ناشر دسترسی پیدا میکنید .</string>
+    <string name="SignInHeader">ورود به حساب کاربری</string>
+    <string name="LoginDesc">اطلاعات حساب کاربری خود را وارد کنید</string>
+    <string name="Mobile">شماره همراه</string>
+    <string name="Password">کلمه عبور</string>
+    <string name="ForgetPass">رمز عبور خود را فراموش کرده اید؟</string>
+    <string name="signUpHeader">ساخت حساب کاربری</string>
+    <string name="SignUpDesc">اطلاعات کاربری خود را در فرم زیر وارد کنید</string>
+    <string name="user">نام کاربری</string>
+    <string name="TermDesc">با ثبت نام در به خوان شما شرایط و قوانین استفاده از سرویس ها و قوانین حریم خصوصی آن را می پذیرید</string>
+    <string name="MobileShow">شماره همراه:</string>
+    <string name="UserShow">نام کاربری :</string>
+    <string name="Exit">خروج</string>
+    <string name="movie_name">Movie Name</string>
+    <string name="rate">Rate</string>
+    <string name="lang">Lang</string>
+    <string name="date">Date</string>
+    <string name="tagline">TagLine</string>
+    <string name="movie_info">Movie Info :</string>
+    <string name="released_date">Released Date :</string>
+    <string name="rating">Rating :</string>
+    <string name="runtime">Runtime :</string>
+    <string name="budget">Budget :</string>
+    <string name="revenue">Revenue :</string>
+    <string name="overview">Overview :</string>
+    <string name="_8_2_22">8-2-22</string>
+    <string name="summary">Summary of movie</string>
+    <string name="errorLoad">خطایی رخ داده است! دوباره تلاش کنید.</string>
+    <string name="retry">تلاش مجدد</string>
+</resources>
