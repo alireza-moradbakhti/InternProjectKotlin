@@ -2,6 +2,8 @@ package com.example.internproject.repository
 
 import com.example.internproject.api.ApiService
 import dagger.hilt.android.scopes.ActivityScoped
+import retrofit2.Response
+import java.util.concurrent.Flow
 import javax.inject.Inject
 
 @ActivityScoped    //scoped objects lives as long as its components

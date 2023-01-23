@@ -7,7 +7,6 @@ import com.example.internproject.response.MovieListResponse
 import com.example.internproject.utils.Constants.API_KEY
 import com.example.internproject.utils.Constants.BASE_URL
 import com.example.internproject.utils.Constants.ConnectionTimeOut
-import com.example.internproject.utils.OnItemClick
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -26,41 +25,10 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object ApiModule {
 
-//    @Provides
-//    @Singleton
-//    fun provideBaseUrl() = BASE_URL
-
     @Provides
     @Singleton
     fun connectionTimeOut() = ConnectionTimeOut
 
-
-    //    @Provides
-//    @Singleton
-//    fun provideOKHttpClient():ApiService  {
-//        val loggingInterceptor = HttpLoggingInterceptor()
-//        loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.HEADERS)
-//        loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
-//
-//        val requestInterceptor = Interceptor { chain ->
-//            val url = chain.request()
-//                .url
-//                .newBuilder()
-//                .addQueryParameter("api_key", API_KEY)
-//                .build()
-//            val request = chain.request().newBuilder()
-//                .url(url)
-//                .build()
-//
-//            return@Interceptor chain.proceed(request)
-//        }
-//
-//        OkHttpClient
-//            .Builder()
-//            .addInterceptor(requestInterceptor)
-//            .addInterceptor(loggingInterceptor)
-//    }
-//
     @Provides
     @Singleton
     fun provideGson(): Gson = GsonBuilder().setLenient().create()
@@ -73,16 +41,6 @@ object ApiModule {
         .apply {
             level = HttpLoggingInterceptor.Level.BODY
         }
-//
-//
-//    @Provides
-//    @Singleton
-//    fun providesOkHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor): OkHttpClient =
-//        OkHttpClient
-//            .Builder()
-//            .addInterceptor(httpLoggingInterceptor)
-//            .build()
-//
 
     @Provides
     @Singleton

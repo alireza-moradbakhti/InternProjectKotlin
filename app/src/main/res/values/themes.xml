@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.InternProject" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/behGreen</item>
-        <item name="colorPrimaryVariant">@color/behGreen</item>
+        <item name="colorPrimary">@color/myBlue</item>
+        <item name="colorPrimaryVariant">@color/myBlue</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

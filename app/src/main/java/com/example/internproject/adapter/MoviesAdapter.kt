@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
+import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
@@ -13,8 +14,12 @@ import com.example.internproject.databinding.ItemRowBinding
 import com.example.internproject.response.MovieListResponse
 import com.example.internproject.utils.Constants.IMG_URL
 import com.example.internproject.utils.OnItemClick
+import com.example.internproject.viewModel.ItemRowViewModel
+import com.example.internproject.viewModel.MoviesViewModel
 
-class MoviesAdapter(private val onItemClick: OnItemClick) :
+class MoviesAdapter(
+    private val onItemClick: OnItemClick
+) :
     PagingDataAdapter<MovieListResponse.MovieResult, MoviesAdapter.ViewHolder>(differCallBack) {
 
 
@@ -26,6 +31,7 @@ class MoviesAdapter(private val onItemClick: OnItemClick) :
         val inflater = LayoutInflater.from(parent.context)
         binding = ItemRowBinding.inflate(inflater, parent, false)
         context = parent.context
+        binding.vm = ItemRowViewModel()
         return ViewHolder()
     }
 
@@ -54,23 +60,24 @@ class MoviesAdapter(private val onItemClick: OnItemClick) :
         }
     }
 
-    companion object {
-        private val differCallBack =
-            object : DiffUtil.ItemCallback<MovieListResponse.MovieResult>() {
-                override fun areItemsTheSame(
-                    oldItem: MovieListResponse.MovieResult,
-                    newItem: MovieListResponse.MovieResult
-                ): Boolean {
-                    return oldItem.id == newItem.id
-                }
 
-                override fun areContentsTheSame(
-                    oldItem: MovieListResponse.MovieResult,
-                    newItem: MovieListResponse.MovieResult
-                ): Boolean {
-                    return oldItem == newItem
-                }
+companion object {
 
+    private val differCallBack =
+        object : DiffUtil.ItemCallback<MovieListResponse.MovieResult>() {
+            override fun areItemsTheSame(
+                oldItem: MovieListResponse.MovieResult,
+                newItem: MovieListResponse.MovieResult
+            ): Boolean {
+                return oldItem.id == newItem.id
             }
-    }
+
+            override fun areContentsTheSame(
+                oldItem: MovieListResponse.MovieResult,
+                newItem: MovieListResponse.MovieResult
+            ): Boolean {
+                return oldItem == newItem
+            }
+        }
+}
 }
