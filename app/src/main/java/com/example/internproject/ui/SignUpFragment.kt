@@ -9,26 +9,17 @@ import android.widget.Toast
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.viewModels
 import com.example.internproject.R
-import com.example.internproject.database.RegisterDbDao
 import com.example.internproject.databinding.FragmentSignUpBinding
 import com.example.internproject.model.User
-import com.example.internproject.repository.DbRepository
 import com.example.internproject.viewModel.SignUpViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.UUID
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class SignUpFragment : BottomSheetDialogFragment() {
 
     private lateinit var binding: FragmentSignUpBinding
-//
-//    @Inject
-//    lateinit var registerDbDao: RegisterDbDao
-//
-//    @Inject
-//    lateinit var dbRepository: DbRepository
 
     private val signUpViewModel : SignUpViewModel by viewModels()
 

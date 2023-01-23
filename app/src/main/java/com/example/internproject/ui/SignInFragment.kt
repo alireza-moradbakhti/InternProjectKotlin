@@ -2,34 +2,24 @@ package com.example.internproject.ui
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModel
-import com.example.internproject.MyApp
 import com.example.internproject.R
-import com.example.internproject.database.RegisterDbDao
 import com.example.internproject.databinding.FragmentSignInBinding
-import com.example.internproject.repository.DbRepository
 import com.example.internproject.viewModel.SignInViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
+
 
 @AndroidEntryPoint
 class SignInFragment : BottomSheetDialogFragment() {
 
     private lateinit var binding: FragmentSignInBinding
 
-//    @Inject
-//    lateinit var registerDbDao: RegisterDbDao
-//
-//    @Inject
-//    lateinit var dbRepository: DbRepository
 
     private val loginViewModel: SignInViewModel by viewModels()
 

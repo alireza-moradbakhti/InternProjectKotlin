@@ -2,7 +2,6 @@ package com.example.internproject.api
 
 import com.example.internproject.response.MovieDetailsResponse
 import com.example.internproject.response.MovieListResponse
-import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path

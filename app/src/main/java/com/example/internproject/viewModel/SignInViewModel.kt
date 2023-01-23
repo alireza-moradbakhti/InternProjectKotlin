@@ -1,10 +1,8 @@
 package com.example.internproject.viewModel
 
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.internproject.model.User
 import com.example.internproject.repository.DbRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch

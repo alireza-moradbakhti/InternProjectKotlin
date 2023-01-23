@@ -1,28 +1,18 @@
 package com.example.internproject.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.navArgs
 import coil.load
 import coil.size.Scale
 import com.example.internproject.R
 import com.example.internproject.databinding.FragmentMovieDetailsBinding
-import com.example.internproject.repository.ApiRepository
-import com.example.internproject.response.MovieDetailsResponse
 import com.example.internproject.utils.Constants.IMG_URL
 import com.example.internproject.viewModel.MovieDetailsViewModel
-import com.example.internproject.viewModel.MoviesViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class MovieDetailsFragment(private val movie_id: Int) : BottomSheetDialogFragment() {

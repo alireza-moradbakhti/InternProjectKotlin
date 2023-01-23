@@ -1,10 +1,7 @@
 package com.example.internproject.di
 
-import com.example.internproject.BuildConfig
 import com.example.internproject.api.ApiService
 import com.example.internproject.repository.ApiRepository
-import com.example.internproject.response.MovieListResponse
-import com.example.internproject.utils.Constants.API_KEY
 import com.example.internproject.utils.Constants.BASE_URL
 import com.example.internproject.utils.Constants.ConnectionTimeOut
 import com.google.gson.Gson
@@ -13,7 +10,6 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

@@ -20,9 +20,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class MovieActivity : AppCompatActivity(), OnItemClick {
     private lateinit var binding: ActivityMovieBinding
 
-//    @Inject
-//    lateinit var apiRepository: ApiRepository
-
     private val movieViewModel: MoviesViewModel by viewModels()
 
 
@@ -33,10 +30,6 @@ class MovieActivity : AppCompatActivity(), OnItemClick {
         val view = binding.root
         super.onCreate(savedInstanceState)
         setContentView(view)
-
-//        movieViewModel.movies.observe(this) {
-//            moviesAdapter = MoviesAdapter(it, this)
-//        }
 
 
         moviesAdapter = MoviesAdapter(this)
